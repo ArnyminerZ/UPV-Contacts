@@ -1,9 +1,9 @@
-import time
 import logging
 
 from selenium.webdriver.common.by import By
 
 from Browser import Browser
+from error.LoginException import LoginException
 
 logger = logging.getLogger(__name__)
 
@@ -44,13 +44,11 @@ class Auth:
         logger.debug("Submitting form")
         form.find_element(By.CLASS_NAME, 'upv_btsubmit').click()
 
-        time.sleep(1)
-
         # Get the cookies
         cookie = driver.get_cookie('TDp')
         if cookie is None:
             logger.error("Error logging in")
-            raise Exception("Error logging in")
+            raise LoginException()
         self._tdp = cookie
 
         return cookie
