@@ -1,5 +1,7 @@
 FROM python:3
 
+MAINTAINER "Arnau Mora"
+
 WORKDIR /usr/src/app
 
 COPY requirements.txt ./
