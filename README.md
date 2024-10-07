@@ -14,3 +14,15 @@ Lo escribo en Python con la idea que más gente pueda aportar soluciones, y mejo
 # Privacidad
 
 El servidor no guarda ninguna información, tan sólo es un intermediario. Esto no quita que tu proveedor de servicios, alguna VPN, o tus propias aplicaciones almacenen alguna información, esto está fuera del control y del objetivo de este proyecto.
+
+# Ejecutando
+
+## Dependencias
+
+**Dependencias de Python:**
+
+Hay que instalar algunas dependencias, que se pueden instalar con `pip`:
+
+```bash
+pip install -r requirements.txt
+```
